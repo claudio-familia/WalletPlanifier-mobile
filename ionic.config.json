@@ -1,0 +1,7 @@
+{
+  "name": "walletPlanifier",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
