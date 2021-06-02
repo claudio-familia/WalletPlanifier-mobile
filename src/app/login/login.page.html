@@ -1,7 +1,11 @@
 <ion-app class="general-container">
   <ion-row class="sub-container">
-    <ion-col>
+    <ion-row class="isologo-container">
       <ion-img class="isologo" src="../../assets/isologo.png"></ion-img>
-    </ion-col>
+    </ion-row>
+
+    <ion-row class='fields-container'>
+      <app-button [model]="appButtonModel"></app-button>
+    </ion-row>
   </ion-row>
 </ion-app>
