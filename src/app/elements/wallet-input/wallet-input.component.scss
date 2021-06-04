@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../../../assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../../../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+:host {
+    width: 100%;
+    height: 55px;
+}
+
+.wallet-input-title {
+    font-family: Roboto-Bold;
+    color: #5181F1;
+    font-size: 12pt;
+}
+
+.wallet-input-field {
+    border-bottom: 1px solid #707070;
+    color: #888888;
+    font-size: 14pt;
+    font-family: Roboto-Regular;
+    padding: 0;
+    height: 35px;
+}

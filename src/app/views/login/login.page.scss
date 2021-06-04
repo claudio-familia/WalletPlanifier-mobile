@@ -1,23 +1,45 @@
-.general-container {
+.login-general-container {
     background-color: #F4F7FC;
+    height: 100%;
 }
 
-.sub-container {
+.login-sub-container {
     background-color: #FFFFFF;
     height: 100%;
     border-radius: 300px;
+    padding: 35px;
 }
 
-.isologo-container {
+.login-isologo-container {
     width: 100%;
 }
 
-.isologo {
+.login-isologo {
     width: 180px;
     margin: auto;
-    margin-top: 50px;
 }
 
-.fields-container {
+.login-fields-container {
+    margin-top: 80px;
+}
+
+.login-input-field {
     width: 100%;
+    margin-bottom: 30px;
+}
+
+.login-buttons-container {
+    margin-top: 10px;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.login-forgot-password {
+    color: #6E99FF;
+    font-size: 11pt;
+    margin-top: 60px; 
+    justify-content: center;
 }

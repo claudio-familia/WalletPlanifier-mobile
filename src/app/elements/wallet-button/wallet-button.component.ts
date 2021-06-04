@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'wallet-button',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wallet-button.component.scss'],
 })
 export class WalletButtonComponent implements OnInit {
+
+  @Input() title: string;
+  @Input() styleType: string;
+  @Input() callback: any;
 
   constructor() { }
 
