@@ -13,8 +13,7 @@
 
 1. Install Android Studio
 2. Install Java Runtime Environment 8 
-3. Configure for Mac <br/>
-  2.1 In *```~/.zshenv```*, *```~/.bashrc```*, *```~/.bash_profile```*, or similar shell startup scripts add the following: <br/>
+3. Configure for macOS or Linux, in *```~/.zshenv```*, *```~/.bashrc```*, *```~/.bash_profile```*, or similar shell startup scripts add the following: <br/>
      
      >**```export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk```** <br/>
      >**```export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin```** <br/>
