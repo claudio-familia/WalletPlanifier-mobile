@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../../../assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+:host {
+    width: 100%;
+    height: 45px;
+}
+
+.wallet-button {
+    width: 100%;
+    color: #FFFFFF;
+    height: 50px;
+    border-radius: 50px;
+    font-family: Roboto-Bold;
+    font-size: 16pt;
+}
+
+.wallet-button-primary {
+    background-color: #868AFC;
+}
+
+.wallet-button-success {
+    background-color: #3ACE60;
+}
+
+.wallet-button-danger {
+    background-color: #F07070;
+}

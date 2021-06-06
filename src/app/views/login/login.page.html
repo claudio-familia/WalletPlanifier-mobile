@@ -1,0 +1,31 @@
+<ion-row class="login-general-container">
+  <ion-col class="login-sub-container">
+    <ion-row class="login-isologo-container">
+      <ion-img class="login-isologo" src="../../assets/isologo.png"></ion-img>
+    </ion-row>
+
+    <ion-row class='login-fields-container'>
+      <ion-row class="login-input-field">
+        <wallet-input [title]="'Username'" [type]="'text'" [callback]="null"></wallet-input>
+      </ion-row>
+
+      <ion-row class="login-input-field">
+        <wallet-input [title]="'Password'" [type]="'text'" [callback]="null"></wallet-input>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="login-buttons-container">
+      <ion-row class="login-button">
+        <wallet-button [title]="'Sign in'" [styleType]="'success'" [callback]="null"></wallet-button>
+      </ion-row>
+
+      <ion-row class="login-button">
+        <wallet-button [title]="'Sign up'" [styleType]="'primary'" [callback]="null"></wallet-button>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="login-forgot-password">
+      Forgot password?
+    </ion-row>
+  </ion-col>
+</ion-row>
