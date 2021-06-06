@@ -12,7 +12,7 @@
 ### Develop for Android
 
 1. Install Android Studio
-2. Install Java Runtime Environment 8 
+2. Install Java Runtime Environment 16 
 3. Configure for macOS or Linux, in *```~/.zshenv```*, *```~/.bashrc```*, *```~/.bash_profile```*, or similar shell startup scripts add the following: <br/>
      
      >**```export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk```** <br/>
