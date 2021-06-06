@@ -20,6 +20,6 @@
      >**```export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools```** <br/>
      >**```export PATH=$PATH:$ANDROID_SDK_ROOT/emulator```**<br/> 
      
-     >**```export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk```**
+     >**```export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk```**
 4. If the folder */android* does not exists run command **```ionic capacitor add android```**
 5. Run command **```ionic capacitor run android```**
