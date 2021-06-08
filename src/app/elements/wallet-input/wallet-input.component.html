@@ -2,4 +2,7 @@
   {{ title }}
 </ion-text>
 
-<ion-input class="wallet-input-field" type="{{type}}"></ion-input>
+<ion-input class="wallet-input-field {{ type === 'password' ? 'wallet-input-field-password' : '' }}" type="{{inputType}}"></ion-input>
+
+<ion-img *ngIf="type === 'password' && showPassword" class="wallet-input-eye" src="../../assets/images/icons/visibility.png" (click)="showOrHidePassword()"></ion-img>
+<ion-img *ngIf="type === 'password' && !showPassword" class="wallet-input-eye" src="../../assets/images/icons/invisible.png" (click)="showOrHidePassword()"></ion-img>
