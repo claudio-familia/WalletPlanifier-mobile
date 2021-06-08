@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'wallet-button',
@@ -9,10 +9,14 @@ export class WalletButtonComponent implements OnInit {
 
   @Input() title: string;
   @Input() styleType: string;
-  @Input() callback: any;
 
-  constructor() { }
+  @Output()  callback = new EventEmitter();
+
+  constructor() {}
 
   ngOnInit() {}
 
+  invoke(): void {
+    this.callback.emit(null);
+  }
 }

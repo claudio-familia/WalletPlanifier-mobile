@@ -11,8 +11,18 @@ export class WalletInputComponent implements OnInit {
   @Input() type: string;
   @Input() callback: any;
 
+  inputType: string = '';
+  showPassword: boolean = false
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.inputType = this.type;
+  }
 
+  showOrHidePassword(): void {
+    this.showPassword = !this.showPassword;
+
+    this.inputType = this.showPassword ? 'text' : 'password';
+  }
 }
