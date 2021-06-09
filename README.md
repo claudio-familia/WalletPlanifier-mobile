@@ -24,11 +24,11 @@
 &emsp;&emsp;&emsp; 3.5 Click in the New button <br/>
 &emsp;&emsp;&emsp; 3.6 In variable name put *ANDROID_SDK_ROOT* <br/>
 &emsp;&emsp;&emsp; 3.7 In variable value put *C:\Users\your-user\AppData\Local\Android\Sdk* or the location of the Android SDK <br>
-&emsp;&emsp;&emsp; 3.9 Click Ok <br/>
-&emsp;&emsp;&emsp; 3.10 Find the system variable called Path and click Edit <br/>
-&emsp;&emsp;&emsp; 3.11 Click New <br/>
-&emsp;&emsp;&emsp; 3.12 Add *C:\Program Files\Java\jdk-15\bin* or the location of the Java Runtime Environment 15 <br>
-&emsp;&emsp;&emsp; 3.13 Click Ok
+&emsp;&emsp;&emsp; 3.8 Click Ok <br/>
+&emsp;&emsp;&emsp; 3.9 Find the system variable called Path and click Edit <br/>
+&emsp;&emsp;&emsp; 3.10 Click New <br/>
+&emsp;&emsp;&emsp; 3.11 Add *C:\Program Files\Java\jdk-15\bin* or the location of the Java Runtime Environment 15 <br>
+&emsp;&emsp;&emsp; 3.12 Click Ok
 
 #### &emsp;&emsp; macOS or Linux
 
