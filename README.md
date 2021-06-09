@@ -13,13 +13,17 @@
 
 1. Install Android Studio
 2. Install Java SE Development Kit 15 
-3. Configure for macOS or Linux, in *```~/.zshenv```*, *```~/.bashrc```*, *```~/.bash_profile```*, or similar shell startup scripts add the following: <br/>
-     
-     >**```export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk```** <br/>
-     >**```export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin```** <br/>
-     >**```export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools```** <br/>
-     >**```export PATH=$PATH:$ANDROID_SDK_ROOT/emulator```**<br/> 
-     
-     >**```export JAVA_HOME=$(/usr/libexec/java_home)```**
+3. Configure: 
+
+#### &emsp;&emsp; macOS or Linux
+
+&emsp;&emsp;&emsp; In *```~/.zshenv```*, *```~/.bashrc```*, *```~/.bash_profile```*, or similar shell startup scripts add the following: <br/>
+
+&emsp;&emsp;&emsp;&emsp; **```export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk```** <br/>
+&emsp;&emsp;&emsp;&emsp; **```export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin```** <br/>
+&emsp;&emsp;&emsp;&emsp; **```export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools```** <br/>
+&emsp;&emsp;&emsp;&emsp; **```export PATH=$PATH:$ANDROID_SDK_ROOT/emulator```**<br/> 
+&emsp;&emsp;&emsp;&emsp; **```export JAVA_HOME=$(/usr/libexec/java_home)```**
+
 4. If the folder */android* does not exists run command **```ionic capacitor add android```**
 5. Run command **```ionic capacitor run android```**
