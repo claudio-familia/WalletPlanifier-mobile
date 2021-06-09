@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { WalletButtonComponent } from './elements/wallet-button/wallet-button.component';
-import { WalletInputComponent } from './elements/wallet-input/wallet-input.component';
+
 
 const routes: Routes = [
   {
@@ -21,7 +20,6 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  entryComponents: [WalletInputComponent, WalletButtonComponent],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
