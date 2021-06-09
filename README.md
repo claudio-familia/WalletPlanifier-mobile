@@ -23,7 +23,7 @@
 &emsp;&emsp;&emsp; 3.4 Click Environment variables <br/>
 &emsp;&emsp;&emsp; 3.5 Click in the New button <br/>
 &emsp;&emsp;&emsp; 3.6 In variable name put *ANDROID_SDK_ROOT* <br/>
-&emsp;&emsp;&emsp; 3.7 In variable value put *C:\Users\<yout-user>\AppData\Local\Android\Sdk* or the location of the Android SDK <br>
+&emsp;&emsp;&emsp; 3.7 In variable value put *C:\Users\your-user\AppData\Local\Android\Sdk* or the location of the Android SDK <br>
 &emsp;&emsp;&emsp; 3.9 Click Ok <br/>
 &emsp;&emsp;&emsp; 3.10 Find the system variable called Path and click Edit <br/>
 &emsp;&emsp;&emsp; 3.11 Click New <br/>
