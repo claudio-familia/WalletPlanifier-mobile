@@ -12,7 +12,7 @@
 ### Develop for Android
 
 1. Install Android Studio
-2. Java SE Development Kit 15 
+2. Install Java SE Development Kit 15 
 3. Configure for macOS or Linux, in *```~/.zshenv```*, *```~/.bashrc```*, *```~/.bash_profile```*, or similar shell startup scripts add the following: <br/>
      
      >**```export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk```** <br/>
