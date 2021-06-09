@@ -28,9 +28,9 @@
 #### &emsp;&emsp; Windows
 
 &emsp;&emsp;&emsp; 3.1 Open any folder on your computer <br/>
-&emsp;&emsp;&emsp; 3.2 In the Navigation Pane right-click This PC and select Properties <br/>
+&emsp;&emsp;&emsp; 3.2 In the navigation pane right-click This PC and select Properties <br/>
 &emsp;&emsp;&emsp; 3.3 Click Advanced system settings <br/>
-&emsp;&emsp;&emsp; 3.4 Click Environment Variables <br/>
+&emsp;&emsp;&emsp; 3.4 Click Environment variables <br/>
 
 4. If the folder */android* does not exists run command **```ionic capacitor add android```**
 5. Run command **```ionic capacitor run android```**
