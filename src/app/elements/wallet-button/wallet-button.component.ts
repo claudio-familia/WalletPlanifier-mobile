@@ -10,11 +10,11 @@ export class WalletButtonComponent implements OnInit {
   @Input() title: string;
   @Input() styleType: string;
 
-  @Output()  callback = new EventEmitter();
+  @Output() callback = new EventEmitter();
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   invoke(): void {
     this.callback.emit(null);

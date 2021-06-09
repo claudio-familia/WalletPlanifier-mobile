@@ -7,20 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
-import { WalletButtonComponent } from 'src/app/elements/wallet-button/wallet-button.component';
-import { WalletInputComponent } from 'src/app/elements/wallet-input/wallet-input.component';
+import { PagesModule } from '../pages.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    LoginPageRoutingModule,
+    PagesModule
   ],
-  declarations: [
-    LoginPage,
-    WalletButtonComponent,
-    WalletInputComponent
-  ]
+  declarations: [LoginPage]
 })
 export class LoginPageModule { }
