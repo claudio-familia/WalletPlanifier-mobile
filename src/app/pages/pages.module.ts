@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { WalletBackButtonComponent } from "../elements/wallet-back-button/wallet-back-button.component";
 import { WalletButtonComponent } from "../elements/wallet-button/wallet-button.component";
 import { WalletInputComponent } from "../elements/wallet-input/wallet-input.component";
 
@@ -7,11 +8,13 @@ import { WalletInputComponent } from "../elements/wallet-input/wallet-input.comp
     imports: [CommonModule],
     declarations: [
         WalletInputComponent, 
-        WalletButtonComponent
+        WalletButtonComponent,
+        WalletBackButtonComponent
     ],
     exports: [
         WalletInputComponent, 
-        WalletButtonComponent
+        WalletButtonComponent,
+        WalletBackButtonComponent
     ]
 })
 export class PagesModule { }

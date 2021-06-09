@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpPage implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private router: Router) { 
+    
   }
 
+  ngOnInit() {
+
+  }
+
+  goBack(): void {
+    this.router.navigate(['/']);
+  }
 }

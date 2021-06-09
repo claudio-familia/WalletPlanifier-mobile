@@ -1,0 +1,20 @@
+.wallet-back-button {
+    width: 60px;
+    height: 60px;
+    background-color: #868AFC;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 3px 7px #C2CEE2;
+}
+
+.wallet-back-button:active {
+    opacity: .7;
+}
+
+.wallet-back-button-arrow {
+    width: 25px;
+    margin: auto;
+}
