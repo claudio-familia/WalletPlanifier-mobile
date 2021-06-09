@@ -31,6 +31,13 @@
 &emsp;&emsp;&emsp; 3.2 In the navigation pane right-click This PC and select Properties <br/>
 &emsp;&emsp;&emsp; 3.3 Click Advanced system settings <br/>
 &emsp;&emsp;&emsp; 3.4 Click Environment variables <br/>
+&emsp;&emsp;&emsp; 3.5 Click in the New button <br/>
+&emsp;&emsp;&emsp; 3.6 In variable name put *ANDROID_SDK_ROOT* <br/>
+&emsp;&emsp;&emsp; 3.7 In variable value put *C:\Users\<yout-user>\AppData\Local\Android\Sdk* or the location of the Android SDK <br>
+&emsp;&emsp;&emsp; 3.9 Click Ok <br/>
+&emsp;&emsp;&emsp; 3.10 Find the system variable called Path and click Edit <br/>
+&emsp;&emsp;&emsp; 3.11 Click New <br/>
+&emsp;&emsp;&emsp; 3.12 Add *C:\Program Files\Java\jre1.8.0_291\bin* or the location of the Java Runtime Environment <br/>
 
 4. If the folder */android* does not exists run command **```ionic capacitor add android```**
 5. Run command **```ionic capacitor run android```**
