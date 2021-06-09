@@ -27,7 +27,7 @@
 &emsp;&emsp;&emsp; 3.9 Click Ok <br/>
 &emsp;&emsp;&emsp; 3.10 Find the system variable called Path and click Edit <br/>
 &emsp;&emsp;&emsp; 3.11 Click New <br/>
-&emsp;&emsp;&emsp; 3.12 Add *C:\Program Files\Java\jre1.8.0_291\bin* or the location of the Java Runtime Environment
+&emsp;&emsp;&emsp; 3.12 Add *C:\Program Files\Java\jdk-15\bin* or the location of the Java Runtime Environment 15
 
 #### &emsp;&emsp; macOS or Linux
 
