@@ -17,10 +17,6 @@ import { WalletInputComponent } from 'src/app/elements/wallet-input/wallet-input
     IonicModule,
     LoginPageRoutingModule
   ],
-  declarations: [
-    LoginPage,
-    WalletButtonComponent,
-    WalletInputComponent
-  ]
+  declarations: [LoginPage]
 })
 export class LoginPageModule { }
