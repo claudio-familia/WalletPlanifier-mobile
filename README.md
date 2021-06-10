@@ -4,7 +4,7 @@
 
 ### Run for Web
 
-1. Go to folder */src/* using the console or terminal
+1. Go to project folder */src/* using the console or terminal
 2. Run command **```npm install```**
 3. Run command **```npm install -g @ionic/cli```**
 4. Run command **```ionic serve```**
@@ -39,3 +39,11 @@
 4. Go to project folder */src/* using the console or terminal
 5. If the folder */android* does not exists run command **```ionic capacitor add android```**
 6. Run command **```ionic capacitor run android```**
+
+### Develop for IOS
+
+1. Install Xcode
+2. Go to project folder */src/* using the console or terminal
+3. If the folder */ios* does not exists run command **```ionic capacitor add ios```**
+4. Run command **```ionic capacitor copy ios```**
+5. Run command **```ionic capacitor run ios```**
