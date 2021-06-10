@@ -36,14 +36,15 @@
 &emsp;&emsp;&emsp; **```export PATH=$PATH:$ANDROID_SDK_ROOT/emulator```**<br/> 
 &emsp;&emsp;&emsp; **```export JAVA_HOME=$(/usr/libexec/java_home)```**
 
-4. Go to project folder */src/* using the console or terminal
+4. Go to project folder using the console or terminal
 5. If the folder */android* does not exists run command **```ionic capacitor add android```**
 6. Run command **```ionic capacitor run android```**
 
 ### Develop for IOS
 
 1. Install Xcode
-2. Go to project folder */src/* using the console or terminal
+2. Go to project folder using the console or terminal
 3. If the folder */ios* does not exists run command **```ionic capacitor add ios```**
-4. Run command **```ionic capacitor copy ios```**
-5. Run command **```ionic capacitor run ios```**
+4. Go to folder */ios/App* and run command **```pod install```**
+5. Run command **```ionic capacitor copy ios```**
+6. Run command **```ionic capacitor run ios```**
