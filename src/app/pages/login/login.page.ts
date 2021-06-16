@@ -17,7 +17,7 @@ export class LoginPage implements OnInit {
   }
 
   login(): void {
-    
+    this.router.navigate(['/home']);
   }
 
   goToSignUp(): void {

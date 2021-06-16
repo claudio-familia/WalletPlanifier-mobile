@@ -10,19 +10,54 @@
 
 .home-header-container {
     background-color: #FFFFFF;
-    height: 50px;
+    height: 60px;
     padding: 0;
     width: 100%;
 }
 
-.home-header-text-container {
+.home-header-column {
+    padding: 0;
+}
+
+.home-header-text-isologo {
     background-color: #5181F1;
+    color: #FFFFFF;
     font-family: Roboto-Bold;
     height: 100%;
-    width: 180px;
     border-radius: 0 50px 50px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+.home-header-currency-button {
+    background-color: #3ACE60;
+    color: #FFFFFF;
+    font-family: Roboto-Bold;
+    font-size: 12pt;
+    border-radius: 50px;
+    width: 80px;
+    height: 45px;
+    float: right;
+    margin-top: 7px;
+}
+
+.home-header-currency-button:active {
+    opacity: .7;
+}
+
+.home-header-user-option {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #F4F7FC;
+    float: right;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+.home-header-user-icon {
+    width: 20px;
+    margin: auto;
 }
