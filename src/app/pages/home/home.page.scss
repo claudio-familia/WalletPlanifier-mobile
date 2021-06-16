@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../../../assets/fonts/roboto/Roboto-Bold.ttf);
+}
+
+.home-general-container {
+    background-color: #F4F7FC;
+    height: 100%;
+}
+
+.home-header-container {
+    background-color: #FFFFFF;
+    height: 50px;
+    padding: 0;
+    width: 100%;
+}
+
+.home-header-text-container {
+    background-color: #5181F1;
+    font-family: Roboto-Bold;
+    height: 100%;
+    width: 180px;
+    border-radius: 0 50px 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
