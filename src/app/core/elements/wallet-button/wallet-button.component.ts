@@ -9,6 +9,7 @@ export class WalletButtonComponent implements OnInit {
 
   @Input() title: string;
   @Input() styleType: string;
+  @Input() isFormButton: boolean = false;
 
   @Output() callback = new EventEmitter();
 

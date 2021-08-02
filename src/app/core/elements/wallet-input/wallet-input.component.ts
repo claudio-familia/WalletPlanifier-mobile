@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'wallet-input',
@@ -8,11 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class WalletInputComponent implements OnInit {
 
   @Input() title: string;
+  @Input() name: string;
   @Input() type: string;
-  @Input() callback: any;
+  @Input() placeholder: string;
+  @Input() value: string;
+  @Input() isRequired: boolean = false;  
+  @Output() callback: EventEmitter<any> = new EventEmitter<any>();  
 
   inputType: string = '';
-  showPassword: boolean = false
+  showPassword: boolean = false  
 
   constructor() { }
 
@@ -24,5 +28,9 @@ export class WalletInputComponent implements OnInit {
     this.showPassword = !this.showPassword;
 
     this.inputType = this.showPassword ? 'text' : 'password';
+  }  
+
+  check(){
+    console.log(this.value)
   }
 }
