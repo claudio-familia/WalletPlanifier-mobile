@@ -7,11 +7,11 @@
 
       <ion-row class='login-fields-container'>
         <ion-row class="login-input-field">
-          <wallet-input name="username" [title]="'Username'" [type]="'text'" (callback)="checkValue($event)"></wallet-input>
+          <wallet-input name="username" title="Username" type="text" value="" (callback)="credentials.username = $event"></wallet-input>
         </ion-row>
 
         <ion-row class="login-input-field">
-          <wallet-input name="password" [title]="'Password'" [type]="'password'" (callback)="credentials.password = $event"></wallet-input>
+          <wallet-input name="password" title="Password" type="password" value="" (callback)="credentials.password = $event"></wallet-input>
         </ion-row>
       </ion-row>
 

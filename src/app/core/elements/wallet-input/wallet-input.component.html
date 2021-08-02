@@ -4,9 +4,9 @@
 
 <ion-input 
   class="wallet-input-field {{ type === 'password' ? 'wallet-input-field-password' : '' }}"
-  type="{{inputType}}"
-  (keyup)="check()"
-  [name]="name"  
+  (keyup)="emitValue()"
+  [type]="inputType"
+  [name]="name"
   [placeholder]="placeholder"
   [(ngModel)]="value"
   [required]="isRequired">

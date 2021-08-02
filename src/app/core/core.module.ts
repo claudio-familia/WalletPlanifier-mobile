@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { WalletBackButtonComponent } from './elements/wallet-back-button/wallet-back-button.component';
 import { WalletButtonComponent } from './elements/wallet-button/wallet-button.component';
 import { WalletInputComponent } from './elements/wallet-input/wallet-input.component';
@@ -7,7 +9,9 @@ import { WalletInputComponent } from './elements/wallet-input/wallet-input.compo
 
 @NgModule({
     imports: [
-        CommonModule        
+        CommonModule,
+        FormsModule,
+        IonicModule        
     ],
     declarations: [
         WalletInputComponent, 

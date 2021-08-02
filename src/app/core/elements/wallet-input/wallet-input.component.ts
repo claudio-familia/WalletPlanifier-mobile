@@ -20,7 +20,7 @@ export class WalletInputComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.inputType = this.type;
   }
 
@@ -30,7 +30,7 @@ export class WalletInputComponent implements OnInit {
     this.inputType = this.showPassword ? 'text' : 'password';
   }  
 
-  check(){
-    console.log(this.value)
+  emitValue(){
+    this.callback.emit(this.value);
   }
 }

@@ -10,7 +10,7 @@ import { Storage } from '@ionic/storage-angular';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {  
+export class AuthService {
   isAuthenticated: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(null);
   currentAccessToken = null;
   url = environment.apiUrl;
@@ -48,18 +48,15 @@ export class AuthService {
     )
   }
 
+  getSecretData() {
+    return this.http.get(`${this.url}/Authentication/user`);
+  }  
+
   async logout() {
     const store = await this.storeService.create();
-    return this.http.post(`${this.url}/auth/logout`, {}).pipe(
-      switchMap(_ => {
-        this.currentAccessToken = null;        
-        const deleteAccess = store.remove('ACCESS_TOKEN_KEY');
-        return from(Promise.all([deleteAccess]));
-      }),
-      tap(_ => {
-        this.isAuthenticated.next(false);
-        this.router.navigateByUrl('/', { replaceUrl: true });
-      })
-    ).subscribe();
+    this.currentAccessToken = null;        
+    const deleteAccess = store.remove('ACCESS_TOKEN_KEY');
+    this.isAuthenticated.next(false);
+    this.router.navigateByUrl('/', { replaceUrl: true });    
   }
 }
