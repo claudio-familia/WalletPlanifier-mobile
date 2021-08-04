@@ -1,35 +1,41 @@
 <wallet-back-button (callback)="goBack()"></wallet-back-button>
 
-<ion-row class="sign-up-general-container">
-  <ion-col class="sign-up-sub-container">
-    <ion-row class="sign-up-isologo-container">
-      <ion-img class="sign-up-isologo" src="../../assets/isologo.png"></ion-img>
+<ion-content>
+
+  <ion-grid>
+    <ion-row class="sign-up-general-container">
+      <ion-col class="sign-up-sub-container">
+        <ion-row class="sign-up-isologo-container">
+          <ion-img class="sign-up-isologo" src="../../assets/isologo.png"></ion-img>
+        </ion-row>
+
+        <ion-row class='sign-up-fields-container'>
+          <ion-row class="sign-up-input-field">
+            <wallet-input name="firstName" title="firstName" type="text" value="" (callback)="newUser.firstName = $event"></wallet-input>
+          </ion-row>
+
+          <ion-row class="sign-up-input-field">
+            <wallet-input name="Lastname" title="Lastname" type="text" value="" (callback)="newUser.lastName = $event"></wallet-input>            
+          </ion-row>
+
+          <ion-row class="sign-up-input-field">
+            <wallet-input name="username" title="Username" type="text" value="" (callback)="newUser.userName = $event"></wallet-input>            
+          </ion-row>
+
+          <ion-row class="sign-up-input-field">
+            <wallet-input name="email" title="Email" type="text" value="" (callback)="newUser.email = $event"></wallet-input>
+          </ion-row>
+
+          <ion-row class="sign-up-input-field">
+            <wallet-input name="password" title="Password" type="text" value="" (callback)="newUser.password = $event"></wallet-input>
+          </ion-row>
+        </ion-row>
+
+        <ion-row class="sign-up-button">
+          <wallet-button title="Sign up" [styleType]="'primary'" (callback)="createUser()">
+          </wallet-button>
+        </ion-row>
+      </ion-col>
     </ion-row>
-
-    <ion-row class='sign-up-fields-container'>
-      <ion-row class="sign-up-input-field">
-        <wallet-input [title]="'Name'" [type]="'text'" [callback]="null"></wallet-input>
-      </ion-row>
-
-      <ion-row class="sign-up-input-field">
-        <wallet-input [title]="'Lastname'" [type]="'text'" [callback]="null"></wallet-input>
-      </ion-row>
-
-      <ion-row class="sign-up-input-field">
-        <wallet-input [title]="'Username'" [type]="'text'" [callback]="null"></wallet-input>
-      </ion-row>
-
-      <ion-row class="sign-up-input-field">
-        <wallet-input [title]="'Email'" [type]="'text'" [callback]="null"></wallet-input>
-      </ion-row>
-
-      <ion-row class="sign-up-input-field">
-        <wallet-input [title]="'Password'" [type]="'password'" [callback]="null"></wallet-input>
-      </ion-row>
-    </ion-row>
-
-    <ion-row class="sign-up-button">
-      <wallet-button [title]="'Sign up'" [styleType]="'primary'" (callback)="null"></wallet-button>
-    </ion-row>
-  </ion-col>
-</ion-row>
+  </ion-grid>
+</ion-content>
