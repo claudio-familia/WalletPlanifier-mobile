@@ -15,6 +15,7 @@ import { CoreModule } from 'src/app/core/core.module';
     FormsModule,
     IonicModule,
     SignUpPageRoutingModule,
+    FormsModule,
     CoreModule
   ],
   declarations: [SignUpPage]

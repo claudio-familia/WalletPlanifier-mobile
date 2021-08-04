@@ -16,12 +16,12 @@ import { WalletInputComponent } from './elements/wallet-input/wallet-input.compo
     declarations: [
         WalletInputComponent, 
         WalletButtonComponent,
-        WalletBackButtonComponent
+        WalletBackButtonComponent,
     ],
     exports: [
         WalletInputComponent, 
         WalletButtonComponent,
-        WalletBackButtonComponent
+        WalletBackButtonComponent,
     ]
 })
 export class CoreModule {};
