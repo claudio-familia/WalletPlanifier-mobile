@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WalletFormPage } from './form/wallet-form.page';
 
-import { WalletPage } from './wallet.page';
+import { TransactionPage } from './transaction.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: WalletPage
-  },
-  {
-    path:'create',
-    component: WalletFormPage
+    component: TransactionPage
   }
 ];
 
@@ -19,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class WalletPageRoutingModule {}
+export class TransactionPageRoutingModule {}

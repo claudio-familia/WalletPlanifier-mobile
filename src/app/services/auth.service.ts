@@ -38,7 +38,7 @@ export class AuthService {
     const store = await this.storeService.create();
     return this.http.post(`${this.url}/Authentication/login`, credentials).pipe(
       switchMap((tokens: {accessToken }) => {
-        this.currentAccessToken = tokens.accessToken;
+        this.currentAccessToken = tokens.accessToken; 
         const storeAccess = store.set('ACCESS_TOKEN_KEY', tokens.accessToken);
         return from(Promise.all([storeAccess]));
       }),

@@ -44,7 +44,11 @@ const routes: Routes = [
     path: 'home',
     pathMatch: 'full',
     redirectTo: 'tabs'
+  },  {
+    path: 'transaction',
+    loadChildren: () => import('./pages/transaction/transaction.module').then( m => m.TransactionPageModule)
   }
+
 
 ];
 @NgModule({
