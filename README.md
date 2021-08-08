@@ -26,12 +26,12 @@ diferentes componentes.
 te permite manejar las clases de tus componentes de forma ligera y eficiente. No 
 obtienen datos del servidor, validan los user input o logs directamente en la 
 consola; delegan la obtención de datos a los servicios.</li>
+</ul>
 
 <h2> Configurando ambientes de desarrollo</h2>
+  
+### Run for Web
 
-<p>
-### Run for zf  Web
-,
 1. Go to project folder */src/* using the console or terminal
 2. Run command **```npm install```**
 3. Run command **```npm install -g @ionic/cli```**
@@ -42,7 +42,7 @@ consola; delegan la obtención de datos a los servicios.</li>
 1. Install Android Studio
 2. Install Java SE Development Kit 8 if you are using Windows or install Java SE Development Kit 15 if you are using macOS
 3. Configure: 
- 
+
 #### &emsp;&emsp; Windows
 
 &emsp;&emsp;&emsp; 3.1 Open any folder on your computer <br/>
@@ -76,4 +76,4 @@ consola; delegan la obtención de datos a los servicios.</li>
 4. Go to folder */ios/App* and run command **```pod install```**
 5. Run command **```ionic capacitor copy ios```**
 6. Run command **```ionic capacitor run ios```**
-</p>
+
