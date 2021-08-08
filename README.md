@@ -1,9 +1,37 @@
 <h1 align="center">
   <img src="https://github.com/claudio-familia/WalletPlanifier-mobile/blob/master/wallet-planning.png" width="100%"/><br/>
 </h1>
+<h2>Aplicación movil ionic</h2>
+<p>
+Las arquitecturas en el framework basados en angular como ionic están definidas y 
+trabajan en conjunto como un ecosistema de desarrollo.
+</p>
+<p>
+ Esta arquitectura se divide en:
+</p>
+<ul>
+<li><b>Módulos:</b> Un módulo o NgModule declara un contexto de compilación para un 
+conjunto de componentes. Un NgModule puede asociar sus componentes con 
+código relacionado, como servicios, para formar unidades funcionales.
+</li>
+<li><b>Componentes:</b> Cada aplicación de Angular tiene al menos un componente. Al 
+igual que el root module, existe el root component que conecta una jerarquía de 
+componentes con el DOM. Cada componente define una clase que contiene 
+data y lógica, y está vinculada a nuestro template HTML.</li>
+<li><b>Servicios:</b> Son todos los datos o lógica que no está asociada directamente a 
+una vista y que quieres utilizar en diferentes partes de tu aplicación y entre 
+diferentes componentes.
+</li>
+<li><b>Inyector de dependencias:</b> Dependency injection o Inyección de Dependencias 
+te permite manejar las clases de tus componentes de forma ligera y eficiente. No 
+obtienen datos del servidor, validan los user input o logs directamente en la 
+consola; delegan la obtención de datos a los servicios.</li>
 
-### Run for Web
+<h2> Configurando ambientes de desarrollo</h2>
 
+<p>
+### Run for zf  Web
+,
 1. Go to project folder */src/* using the console or terminal
 2. Run command **```npm install```**
 3. Run command **```npm install -g @ionic/cli```**
@@ -14,7 +42,7 @@
 1. Install Android Studio
 2. Install Java SE Development Kit 8 if you are using Windows or install Java SE Development Kit 15 if you are using macOS
 3. Configure: 
-
+ 
 #### &emsp;&emsp; Windows
 
 &emsp;&emsp;&emsp; 3.1 Open any folder on your computer <br/>
@@ -48,3 +76,4 @@
 4. Go to folder */ios/App* and run command **```pod install```**
 5. Run command **```ionic capacitor copy ios```**
 6. Run command **```ionic capacitor run ios```**
+</p>
