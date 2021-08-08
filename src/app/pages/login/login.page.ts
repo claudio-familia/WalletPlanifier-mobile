@@ -15,6 +15,8 @@ export class LoginPage implements OnInit {
     username : '', 
     password : ''
   }
+  
+  showLoading = false;
 
   constructor(private authService: AuthService,
               private router: Router,
@@ -41,8 +43,9 @@ export class LoginPage implements OnInit {
     }
     
     
-    const loading = await this.loadingController.create();
-    await loading.present();
+    //const loading = await this.loadingController.create();
+    //await loading.present();
+    this.showLoading = true;
 
     const data = { 
       userName: this.credentials.username, 
@@ -53,11 +56,13 @@ export class LoginPage implements OnInit {
     
     request.subscribe(
       async res => {
-        await loading.dismiss();
+        //await loading.dismiss();
+        this.showLoading = false;
         this.router.navigateByUrl('/home', { replaceUrl: true }); 
       },
       async err => {
-        await loading.dismiss();
+        //await loading.dismiss();
+        this.showLoading = false;
 
         const alert = await this.alertController.create({
           header: 'Login failed',
