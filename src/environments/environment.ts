@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://wallet-planifier-api.herokuapp.com/api',
+  endpoints: {
+    authentication: {
+      login: 'Authentication/login',
+      signUp: '/api/Users'
+    },
+  }
 };
 
 /*

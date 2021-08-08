@@ -1,0 +1,6 @@
+<button 
+    class="wallet-button {{ styleType === 'success' ? 'wallet-button-success' : styleType === 'danger' ? 'wallet-button-danger' : 'wallet-button-primary' }}" 
+    [type]="isFormButton ? 'submit' : 'button'"
+    (click)="invoke()">    
+    {{title}}    
+ </button>

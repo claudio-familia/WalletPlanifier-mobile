@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(public apiService: AuthService) { }
+
+  secretData: any = null;
 
   ngOnInit() {
+  }
+
+  async getData() {
+    this.secretData = null;
+ 
+    this.apiService.getSecretData().subscribe((res: any) => {      
+      this.secretData = res;
+    });
   }
 
 }
