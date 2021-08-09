@@ -1,10 +1,13 @@
 .tabs {
     background-color: #FFFFFF;
     border: 0;
+    padding: 0;
 }
 
 .tabs-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    height: 70px;
 }

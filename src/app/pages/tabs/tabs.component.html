@@ -1,15 +1,15 @@
 <ion-tabs class="tabs">
   <ion-row>
-    <ion-col class="tabs-button-container">
-      <wallet-icon-button [iconPath]="'../../assets/images/icons/home.png'"></wallet-icon-button>
+    <ion-col class="tabs-button-container" >
+      <wallet-icon-button [iconPath]="'../../assets/images/icons/home.png'" (callback)="goToHome()" ></wallet-icon-button>
     </ion-col>
 
     <ion-col class="tabs-button-container">
-      <wallet-icon-button [iconPath]="'../../assets/images/icons/statistics.png'"></wallet-icon-button>
+      <wallet-icon-button [iconPath]="'../../assets/images/icons/statistics.png'" (callback)="goToReports()" ></wallet-icon-button>
     </ion-col>
 
     <ion-col class="tabs-button-container">
-      <wallet-icon-button [iconPath]="'../../assets/images/icons/wallet.png'"></wallet-icon-button>
+      <wallet-icon-button [iconPath]="'../../assets/images/icons/wallet.png'" (callback)="goToWallet()" ></wallet-icon-button>
     </ion-col>
   </ion-row>
 </ion-tabs>
