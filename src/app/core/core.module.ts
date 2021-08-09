@@ -25,6 +25,7 @@ import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading
     exports: [
         WalletInputComponent, 
         WalletButtonComponent,
+        WalletBackButtonComponent,
         WalletLoadingComponent,
         WalletIconButtonComponent
     ]
