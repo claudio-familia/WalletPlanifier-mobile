@@ -10,6 +10,9 @@ export const environment = {
       login: 'Authentication/login',
       signUp: '/api/Users'
     },
+    dashboard: {
+      balance: '/dashboard/balance',
+    },
   }
 };
 
