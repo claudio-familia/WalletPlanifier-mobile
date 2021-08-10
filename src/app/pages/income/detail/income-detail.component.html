@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="incomes"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Incomes detail</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content *ngIf="income">
+
+    <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>{{income.description}}</ion-card-subtitle>
+          <ion-card-title>{{income.frecuency.description}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+
+          <section>
+            <header>Actions</header>
+            <ion-button color="warning"  [routerLink]="'edit/'+income.id">Edit</ion-button>
+            <ion-button color="success" (click)="applyTransaction()">Apply transaction</ion-button>            
+          </section>
+        </ion-card-content>
+
+        <ion-list>
+            <ion-list-header>
+              <ion-label>List of transactions</ion-label>      
+            </ion-list-header>
+            <ion-item>            
+              <ion-label><b>Description</b></ion-label>
+              <ion-note slot="end">Amount</ion-note>
+            </ion-item>
+            <ion-item *ngFor="let transaction of income.transactions" >
+              <ion-label>
+                <h2>{{income.description}}</h2>
+                <h3>{{income.frecuency.description}}</h3>
+              </ion-label>      
+              <ion-note slot="end" color="primary">{{income.amount | number}}</ion-note>
+            </ion-item>
+          </ion-list>                
+      </ion-card>
+  </ion-content>
+  
