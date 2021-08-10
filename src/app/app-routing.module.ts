@@ -37,7 +37,7 @@ const routes: Routes = [
             loadChildren: () => import('./pages/wallet/wallet.module').then(m => m.WalletPageModule)
           }
         ]
-      },
+      },    
       {
         path: 'reports',
         canActivate: [AuthGuard],
@@ -56,10 +56,6 @@ const routes: Routes = [
     redirectTo: 'tabs'
   },
   {
-    path: 'reports',
-    loadChildren: () => import('./pages/reports/reports.module').then( m => m.ReportsPageModule)
-  },
-  {
     path: 'transactions',
     loadChildren: () => import('./pages/transaction/transaction.module').then( m => m.TransactionPageModule)
   },
@@ -71,8 +67,6 @@ const routes: Routes = [
     path: 'debts',
     loadChildren: () => import('./pages/debt/debt.module').then( m => m.DebtPageModule)
   }
-
-
 ];
 @NgModule({
   imports: [
