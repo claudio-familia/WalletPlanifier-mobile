@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { WalletBackButtonComponent } from './elements/wallet-back-button/wallet-back-button.component';
 import { WalletButtonComponent } from './elements/wallet-button/wallet-button.component';
 import { WalletCardComponent } from './elements/wallet-card/wallet-card.component';
+import { WalletHeaderComponent } from './elements/wallet-header/wallet-header.component';
 import { WalletIconButtonComponent } from './elements/wallet-icon-button/wallet-icon-button.component';
 import { WalletInputComponent } from './elements/wallet-input/wallet-input.component';
 import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading.component';
@@ -22,7 +23,8 @@ import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading
         WalletBackButtonComponent,
         WalletLoadingComponent,
         WalletIconButtonComponent,
-        WalletCardComponent
+        WalletCardComponent,
+        WalletHeaderComponent
     ],
     exports: [
         WalletInputComponent, 
@@ -30,7 +32,8 @@ import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading
         WalletBackButtonComponent,
         WalletLoadingComponent,
         WalletIconButtonComponent,
-        WalletCardComponent
+        WalletCardComponent,
+        WalletHeaderComponent
     ]
 })
 export class CoreModule {};

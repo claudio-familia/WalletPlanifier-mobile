@@ -15,7 +15,7 @@ export class TabsComponent {
   }
 
   goToReports(): void {
-    this.router.navigate(['']);
+    this.router.navigate(['reports']);
   }
 
   goToWallet(): void {
