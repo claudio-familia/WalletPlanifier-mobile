@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { TransactionPageRoutingModule } from './transaction-routing.module';
 
 import { TransactionPage } from './transaction.page';
-import { FormComponent } from './form/form.component';
 
 @NgModule({
   imports: [
@@ -16,6 +15,6 @@ import { FormComponent } from './form/form.component';
     IonicModule,
     TransactionPageRoutingModule
   ],
-  declarations: [TransactionPage, FormComponent]
+  declarations: [TransactionPage]
 })
 export class TransactionPageModule {}

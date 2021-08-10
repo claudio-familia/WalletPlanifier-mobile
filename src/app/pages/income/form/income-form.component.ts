@@ -144,5 +144,4 @@ export class IncomeFormComponent implements OnInit {
 
     this.router.navigate(['incomes']);
   }
-
 }

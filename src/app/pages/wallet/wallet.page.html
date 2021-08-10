@@ -14,22 +14,20 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col size="12" *ngIf="wallet">
+      <ion-col size="12" routerLink="/transactions">
         <ion-card>
           <img class="wallet-image" src="assets/images/wallet.png" />
           <ion-card-header>
             <ion-card-subtitle>Balance</ion-card-subtitle>
-            <ion-card-title>{{wallet.total | number}}</ion-card-title>
+            <ion-card-title *ngIf="wallet">{{wallet.total | number}}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <b>{{wallet.description}}</b>
+            <b *ngIf="wallet">{{wallet.description}}</b>
+            <br>            
+            <canvas #lineCanvas></canvas>
           </ion-card-content>
         </ion-card>        
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <wallet-button routerLink="/transactions" title="Transactions" styleType="dark" (callback)="null"></wallet-button>
-      <br>
+      </ion-col>     
     </ion-row>
     <ion-row>
       <wallet-button routerLink="/incomes" title="Incomes" styleType="dark" (callback)="null"></wallet-button>

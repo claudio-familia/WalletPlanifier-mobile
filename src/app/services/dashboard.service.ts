@@ -16,4 +16,8 @@ export class DashboardService {
     getBalance(): Observable<any> {
         return this.http.get(this.url);
     }
+
+    getWallet(): Observable<any> {
+        return this.http.get(`${environment.apiUrl}/dashboard/wallet`);
+    }
 }
