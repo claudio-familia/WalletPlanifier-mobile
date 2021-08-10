@@ -10,7 +10,6 @@ import { WalletIconButtonComponent } from './elements/wallet-icon-button/wallet-
 import { WalletInputComponent } from './elements/wallet-input/wallet-input.component';
 import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading.component';
 
-
 @NgModule({
     imports: [
         CommonModule,
@@ -36,4 +35,5 @@ import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading
         WalletHeaderComponent
     ]
 })
+
 export class CoreModule {};
