@@ -9,7 +9,7 @@ import { WalletHeaderComponent } from './elements/wallet-header/wallet-header.co
 import { WalletIconButtonComponent } from './elements/wallet-icon-button/wallet-icon-button.component';
 import { WalletInputComponent } from './elements/wallet-input/wallet-input.component';
 import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading.component';
-
+import { WalletTransactionCardComponent } from './elements/wallet-transaction-card/wallet-transaction-card.component';
 
 @NgModule({
     imports: [
@@ -24,7 +24,8 @@ import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading
         WalletLoadingComponent,
         WalletIconButtonComponent,
         WalletCardComponent,
-        WalletHeaderComponent
+        WalletHeaderComponent,
+        WalletTransactionCardComponent
     ],
     exports: [
         WalletInputComponent, 
@@ -33,7 +34,9 @@ import { WalletLoadingComponent } from './elements/wallet-loading/wallet-loading
         WalletLoadingComponent,
         WalletIconButtonComponent,
         WalletCardComponent,
-        WalletHeaderComponent
+        WalletHeaderComponent,
+        WalletTransactionCardComponent
     ]
 })
+
 export class CoreModule {};

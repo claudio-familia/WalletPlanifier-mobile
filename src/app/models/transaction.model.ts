@@ -4,7 +4,7 @@ import { User } from "./user.model";
 import { Wallet } from "./wallet.model";
 
 export class Transactions {
-    id?:                number;
+    id?:               number;
     userId:            number;
     walletId:          number;
     incomeId:          number | null;

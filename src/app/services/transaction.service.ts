@@ -12,7 +12,7 @@ export class TransactionService {
     _apiUrl: string;
 
     constructor(private _httpService: HttpClient) {
-        this._apiUrl = `${environment.apiUrl}/transactions`;
+        this._apiUrl = `${environment.apiUrl}/transactions/3`;
     }
 
     get(): Observable<Transactions[]> {

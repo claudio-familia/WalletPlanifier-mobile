@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Roboto-Black;
+    src: url(../../../../assets/fonts/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../../../../assets/fonts/roboto//Roboto-Medium.ttf);
+}
+
+:host {
+    width: 100%;
+}
+
+.wallet-transaction-card-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 7px #E8EEF5;
+    margin-bottom: 15px;
+}
+
+.wallet-transaction-card-title {
+    color: #888888;
+    font-family: Roboto-Black;
+    font-size: 18pt;
+}
+
+.wallet-transaction-card-amount {
+    font-family: Roboto-Black;
+    font-size: 22pt;
+    margin-top: 15px;
+}
+
+.wallet-transaction-card-wallet {
+    font-family: Roboto-Medium;
+    font-size: 12pt;
+    margin-top: 15px;
+    color: #888888;
+}
