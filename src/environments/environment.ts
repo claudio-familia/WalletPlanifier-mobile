@@ -13,6 +13,9 @@ export const environment = {
     dashboard: {
       balance: '/dashboard/balance',
     },
+    transactions: {
+      balance: '/transactions/3',
+    },
   }
 };
 

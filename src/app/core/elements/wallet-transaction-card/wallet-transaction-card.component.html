@@ -1,3 +1,5 @@
-<p>
-  wallet-transaction-card works!
-</p>
+<ion-grid class="wallet-transaction-card-container">
+  <ion-row class="wallet-transaction-card-title" >{{title}}</ion-row>
+  <ion-row class="wallet-transaction-card-amount" style="color: {{isIncome ? '#3ACE60' : '#F07070'}};">US$ {{amount}}.00</ion-row>
+  <ion-row class="wallet-transaction-card-wallet"><ion-text>Wallet</ion-text>: {{walletName}}</ion-row>
+</ion-grid>

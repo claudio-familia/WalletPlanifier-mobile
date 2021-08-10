@@ -2,4 +2,13 @@
     <ion-row class="reports-title">
         Transactions
     </ion-row>
+
+    <ion-row class="reports-transactions-container">
+        <wallet-transaction-card *ngFor="let transaction of transactions" 
+            [title]="transaction.title" 
+            [income]="transaction.income?.amount" 
+            [debt]="transaction.debt?.amount" 
+            [walletName]="transaction.wallet.description">
+        </wallet-transaction-card>
+    </ion-row>
   </ion-row>
