@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Roboto-Black;
+    src: url(../../../../assets/fonts/roboto/Roboto-Black.ttf);
+}
+
+:host {
+    width: 100%;
+}
+
+.wallet-card-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 7px #E8EEF5;
+}
+
+.wallet-card-title {
+    color: #888888;
+    font-family: Roboto-Black;
+    font-size: 22pt;
+}
+
+.wallet-card-value {
+    font-family: Roboto-Black;
+    font-size: 22pt;
+    margin-top: 15px;
+}
