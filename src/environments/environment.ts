@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://wallet-planifier-api.herokuapp.com/api',
+  apiUrl: 'https://wallet-planifier-api.herokuapp.com/api',
   endpoints: {
     authentication: {
       login: 'Authentication/login',
