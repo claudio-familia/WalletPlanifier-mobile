@@ -16,4 +16,20 @@
       </button>
     </ion-col>
   </ion-row>
+
+  <ion-row class="home-body-container">
+    <wallet-card [title]="'Available money'" [value]="'US$ 1,345.00'" [valueColor]="'#5181F1'"></wallet-card>
+    <wallet-card [title]="'Spent money'" [value]="'US$ 236.00'" [valueColor]="'#5181F1'"></wallet-card>
+
+    <ion-row>
+      <ion-col>
+        <wallet-card [title]="'Pending debts'" [value]="'4'" [valueColor]="'#F07070'" [valueSize]="50"></wallet-card>
+      </ion-col>
+      <ion-col>
+        <wallet-card [title]="'Paid debts'" [value]="'2'" [valueColor]="'#3ACE60'" [valueSize]="50"></wallet-card>
+      </ion-col>
+    </ion-row>
+
+    <wallet-card [title]="'Money in debts'" [value]="'US$ 398.00'" [valueColor]="'#F07070'"></wallet-card>
+  </ion-row>
 </ion-row>
