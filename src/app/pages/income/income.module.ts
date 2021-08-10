@@ -9,6 +9,7 @@ import { IncomePageRoutingModule } from './income-routing.module';
 import { IncomePage } from './income.page';
 import { IncomeFormComponent } from './form/income-form.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { IncomeDetailComponent } from './detail/income-detail.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { CoreModule } from 'src/app/core/core.module';
     IncomePageRoutingModule,
     CoreModule
   ],
-  declarations: [IncomePage, IncomeFormComponent]
+  declarations: [IncomePage, IncomeFormComponent, IncomeDetailComponent]
 })
 export class IncomePageModule {}
