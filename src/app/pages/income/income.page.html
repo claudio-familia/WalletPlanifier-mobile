@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="wallet"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Incomes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>List of incomes</ion-label>      
+    </ion-list-header>
+    <ion-item>            
+      <ion-label><b>Description</b></ion-label>
+      <ion-note slot="end">Amount</ion-note>
+    </ion-item>
+    <ion-item *ngFor="let income of incomes" [routerLink]="'details/'+income.id">
+      <ion-label>
+        <h2>{{income.description}}</h2>
+        <h3>{{income.frecuency.description}}</h3>
+      </ion-label>      
+      <ion-note slot="end" color="primary">{{income.amount | number}}</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="create">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

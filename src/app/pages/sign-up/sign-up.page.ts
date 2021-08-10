@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -18,21 +19,39 @@ export class SignUpPage implements OnInit {
     email: '',
   };
 
-  constructor(private router: Router, private userService:UserService) {     
+  loadServ: HTMLIonLoadingElement;
+
+  constructor(private router: Router, 
+              private loadingService: LoadingController,
+              private alertService: AlertController,              
+              private userService:UserService) {     
   }
 
-  ngOnInit() {
-
+  async ngOnInit() {
+    this.loadServ = await this.loadingService.create()
   }
 
   goBack(): void {
     this.router.navigate(['/']);
   }
 
-  createUser(){
+  async createUser(){
+    this.loadServ.present();
+
     this.userService.create(this.newUser).subscribe(
-      res => {
-        console.log(res)
+      async res => {
+
+        this.loadServ.dismiss();
+
+        const alert = await this.alertService.create({
+          header: 'Operation sucessfull',
+          message: 'The user was created correctly',
+          buttons: ['OK'],
+        });
+
+        alert.present().then(() => {
+          this.router.navigate['/login'];
+        });
       }
     )
   }
