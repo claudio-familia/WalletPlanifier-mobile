@@ -1,22 +1,4 @@
 <ion-row class="home-general-container">
-  <ion-row class="home-header-container">
-    <ion-col size="5" class="home-header-column">
-      <ion-text class="home-header-text-isologo">
-        Wallet Planifier
-      </ion-text>
-    </ion-col>
-
-    <ion-col size="4" class="home-header-column">
-      <button class="home-header-currency-button" (click)="null">USD</button>
-    </ion-col>
-
-    <ion-col size="3" class="home-header-column">
-      <button class="home-header-user-option" (click)="null">
-        <ion-img class="home-header-user-icon" src="../../assets/images/icons/user.png"></ion-img>
-      </button>
-    </ion-col>
-  </ion-row>
-
   <ion-row class="home-body-container">
     <ion-row class="home-card-container">
       <wallet-card [title]="'Available money'" [value]="balance.availableMoney" [valueColor]="'#5181F1'"></wallet-card>

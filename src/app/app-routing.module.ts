@@ -37,6 +37,16 @@ const routes: Routes = [
             loadChildren: () => import('./pages/wallet/wallet.module').then(m => m.WalletPageModule)
           }
         ]
+      },
+      {
+        path: 'reports',
+        canActivate: [AuthGuard],
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./pages/reports/reports.module').then(m => m.ReportsPageModule)
+          }
+        ]
       }
     ],
   },
@@ -44,7 +54,12 @@ const routes: Routes = [
     path: 'home',
     pathMatch: 'full',
     redirectTo: 'tabs'
+  },
+  {
+    path: 'reports',
+    loadChildren: () => import('./pages/reports/reports.module').then( m => m.ReportsPageModule)
   }
+
 
 ];
 @NgModule({
