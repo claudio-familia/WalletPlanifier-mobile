@@ -58,6 +58,18 @@ const routes: Routes = [
   {
     path: 'reports',
     loadChildren: () => import('./pages/reports/reports.module').then( m => m.ReportsPageModule)
+  },
+  {
+    path: 'transactions',
+    loadChildren: () => import('./pages/transaction/transaction.module').then( m => m.TransactionPageModule)
+  },
+  {
+    path: 'incomes',
+    loadChildren: () => import('./pages/income/income.module').then( m => m.IncomePageModule)
+  },
+  {
+    path: 'debts',
+    loadChildren: () => import('./pages/debt/debt.module').then( m => m.DebtPageModule)
   }
 
 

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="debts"></ion-back-button>
+    </ion-buttons>
+    <ion-title>New Debt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          <h1>
+            Debts Form
+          </h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="12">        
+        <ion-list>
+          <ion-radio-group [value]="selectedFrecuency">
+            <ion-list-header>
+              <ion-label style="color: #5181F1">Frecuencia</ion-label>
+            </ion-list-header>
+            <ion-item (click)="selectedFrecuency = 'none'">
+              <ion-label>Select a frecuency</ion-label>
+              <ion-radio slot="start" color="tertiary" value="none"></ion-radio>
+            </ion-item>
+  
+            <ion-item *ngFor="let frecuency of frecuencies" (click)="selectedFrecuency = frecuency.id">
+              <ion-label>{{frecuency.description}}</ion-label>
+              <ion-radio slot="start" color="tertiary" [value]="frecuency.id"></ion-radio>
+            </ion-item>        
+          </ion-radio-group>
+        </ion-list>
+        <br>
+      </ion-col>
+      <ion-col size="12" style="padding: 20px">
+        <wallet-input name="description" 
+                      title="Description" 
+                      type="text" 
+                      placeholder="Type any wallet's description or nickname"
+                      [value]="newDebt.description" 
+                      (callback)="newDebt.description = $event"></wallet-input>
+                      <br>
+      </ion-col>
+      <ion-col size="12" style="padding: 20px">
+        <wallet-input name="amount" 
+                      title="Amount" 
+                      type="number" 
+                      placeholder="Type income's amount"
+                      [value]="newDebt.amount" 
+                      (callback)="newDebt.amount = $event"></wallet-input>
+      </ion-col>
+      <ion-col size="12" style="padding: 20px 0px">
+        <ion-item>
+          <ion-label>is it fixed?</ion-label>
+          <ion-checkbox color="primary" checked slot="start" [(ngModel)]="newDebt.isFixed"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" style="padding: 20px 0px" *ngIf="!newDebt.isFixed">
+        <ion-item>
+          <ion-label style="color: #5181F1"><b>End date</b></ion-label>
+          <ion-datetime [(ngModel)]="newDebt.endDate" value="2021-08-09" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <wallet-button [title]="debtId ? 'Update' : 'Create'" [styleType]="'primary'" (callback)="create()"></wallet-button>        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button slot="end" color="light">Create</ion-button>
+
+</ion-content>

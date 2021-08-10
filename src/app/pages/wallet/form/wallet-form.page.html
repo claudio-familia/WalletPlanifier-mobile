@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          <h1>
+            Wallet form
+          </h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="12">
+        <wallet-input name="description" 
+                      title="Description" 
+                      type="text" 
+                      placeholder="Type any wallet's description or nickname"
+                      value="" 
+                      (callback)="newWallet.description = $event"></wallet-input>
+      </ion-col>
+      <ion-col size="12">
+        <wallet-input name="total" 
+                      title="Actual balance" 
+                      type="number" 
+                      placeholder="Type wallet's balance"
+                      value="" 
+                      (callback)="newWallet.total = $event"></wallet-input>
+      </ion-col>
+      <ion-col size="12">        
+        <wallet-button title="Create" [styleType]="'primary'" (callback)="create()"></wallet-button>        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button slot="end" color="light">Create</ion-button>
+
+</ion-content>

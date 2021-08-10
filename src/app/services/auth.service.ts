@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 import { Storage } from '@ionic/storage-angular';
- 
+import jwt_decode from "jwt-decode"; 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -38,7 +39,7 @@ export class AuthService {
     const store = await this.storeService.create();
     return this.http.post(`${this.url}/Authentication/login`, credentials).pipe(
       switchMap((tokens: {accessToken }) => {
-        this.currentAccessToken = tokens.accessToken;
+        this.currentAccessToken = tokens.accessToken; 
         const storeAccess = store.set('ACCESS_TOKEN_KEY', tokens.accessToken);
         return from(Promise.all([storeAccess]));
       }),
@@ -50,7 +51,15 @@ export class AuthService {
 
   getSecretData() {
     return this.http.get(`${this.url}/Authentication/user`);
-  }  
+  }
+
+  async getUserId(){
+    const store = await this.storeService.create()
+    
+    const token = jwt_decode(await store.get('ACCESS_TOKEN_KEY'));
+    
+    return token['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'];
+  }
 
   async logout() {
     const store = await this.storeService.create();
