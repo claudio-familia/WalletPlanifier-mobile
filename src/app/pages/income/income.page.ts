@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { Income } from 'src/app/models/income.model';
 import { IncomeService } from 'src/app/services/income.service';
@@ -11,10 +12,14 @@ import { IncomeService } from 'src/app/services/income.service';
 export class IncomePage implements OnInit {
   incomes: Income[] = [];
 
-  constructor(private incomeService: IncomeService) { }
+  constructor(private incomeService: IncomeService, private activatedRoute: ActivatedRoute) { }
 
   async ngOnInit() {
-    await this.getIncomes();
+    this.activatedRoute.params.subscribe(
+      async res => {
+        await this.getIncomes();    
+      }
+    )    
   }
 
   private async getIncomes() {

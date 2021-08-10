@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Debt } from 'src/app/models/debt.model';
 import { DebtService } from 'src/app/services/debt.service';
 
@@ -11,10 +12,14 @@ export class DebtPage implements OnInit {
 
   debts: Debt[] = [];
 
-  constructor(private debtService: DebtService) { }
+  constructor(private debtService: DebtService, private activatedRoute: ActivatedRoute) { }
 
   async ngOnInit() {
-    await this.getDebts();
+    this.activatedRoute.params.subscribe(
+      async res => {
+        await this.getDebts();    
+      }
+    )    
   }
 
   private async getDebts() {

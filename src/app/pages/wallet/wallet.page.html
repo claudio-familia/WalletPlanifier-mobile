@@ -19,7 +19,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col size="12" *ngIf="wallet">
+      <ion-col size="12" *ngIf="wallet" routerLink="/transactions">
         <ion-card>
           <img class="wallet-image" src="assets/images/wallet.png" />
           <ion-card-header>
@@ -31,10 +31,6 @@
           </ion-card-content>
         </ion-card>        
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <wallet-button routerLink="/transactions" title="Transactions" styleType="dark" (callback)="null"></wallet-button>
-      <br>
     </ion-row>
     <ion-row>
       <wallet-button routerLink="/incomes" title="Incomes" styleType="dark" (callback)="null"></wallet-button>

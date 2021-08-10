@@ -52,6 +52,8 @@ export class DebtFormComponent implements OnInit {
         this.debtId = res.id;
         this.newDebt.description = res.description
         this.newDebt.amount = res.amount
+        this.newDebt.isFixed = res.isFixed;
+        this.newDebt.endDate = res.endDate;
         this.newDebt.frecuencyId = res.frecuencyId
         this.selectedFrecuency = res.frecuencyId
       }

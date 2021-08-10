@@ -1,18 +1,18 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button defaultHref="incomes"></ion-back-button>
+            <ion-back-button defaultHref="debts"></ion-back-button>
         </ion-buttons>
-        <ion-title>Incomes detail</ion-title>
+        <ion-title>Debts detail</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="income && frecuencyData">
+<ion-content *ngIf="debt && frecuencyData">
 
     <ion-card>
         <ion-card-header>
-            <ion-card-subtitle>{{income.creationTime | date}}</ion-card-subtitle>
-            <ion-card-title>{{income.description}}</ion-card-title>
+            <ion-card-subtitle>{{debt.creationTime | date}}</ion-card-subtitle>
+            <ion-card-title>{{debt.description}}</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -20,10 +20,18 @@
                 <header>
                     <h3>General Information</h3>
                 </header>
-                <ion-list>
+                <ion-list>                    
                     <ion-item>
                         <ion-label><b>Amount</b></ion-label>
-                        <ion-note slot="end">{{income.amount | number}}</ion-note>
+                        <ion-note slot="end">{{debt.amount | number}}</ion-note>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label><b>Is it fixed?</b></ion-label>
+                        <ion-note slot="end">{{debt.isFixed ? 'Yes' : 'No' }}</ion-note>
+                    </ion-item>
+                    <ion-item *ngIf="!debt.isFixed">
+                        <ion-label><b>End Date</b></ion-label>
+                        <ion-note slot="end">{{debt.endDate | date }}</ion-note>
                     </ion-item>
                     <ion-item>
                         <ion-label><b>Frecuency</b></ion-label>
@@ -41,10 +49,10 @@
                     <h3>Actions</h3>
                 </header>
                 <div style="margin-bottom: 10px;">
-                    <wallet-button styleType="dark" title="Edit income" [routerLink]="'/incomes/edit/'+income.id"></wallet-button>
+                    <wallet-button styleType="dark" title="Edit debt" [routerLink]="'/debts/edit/'+debt.id"></wallet-button>
                 </div>
                 <div>
-                    <wallet-button styleType="success" title="Apply transaction" (callback)="applyTransaction(income.id)"></wallet-button>
+                    <wallet-button styleType="success" title="Apply transaction" (callback)="applyTransaction(debt.id)"></wallet-button>
                 </div>
             </section>
 
@@ -57,7 +65,7 @@
                         <ion-label><b>Description</b></ion-label>
                         <ion-note slot="end">Amount</ion-note>
                     </ion-item>
-                    <ion-item-group *ngFor="let transaction of income.transactions">
+                    <ion-item-group *ngFor="let transaction of debt.transactions">
                         <ion-item-divider>
                             <ion-label>{{transaction?.title}}</ion-label>
                         </ion-item-divider>
@@ -67,7 +75,7 @@
                                 <h2>{{transaction.completedTime | date}}</h2>
                                 <h3>{{transaction?.description}}</h3>
                             </ion-label>
-                            <ion-note slot="end" color="success">
+                            <ion-note slot="end" color="danger">
                                 {{transaction?.finalWalletValue | number}}
                             </ion-note>                            
                         </ion-item>
