@@ -19,24 +19,25 @@
 
   <ion-row class="home-body-container">
     <ion-row class="home-card-container">
-      <wallet-card [title]="'Available money'" [value]="'US$ 1,345.00'" [valueColor]="'#5181F1'"></wallet-card>
+      <wallet-card [title]="'Available money'" [value]="balance.availableMoney" [valueColor]="'#5181F1'"></wallet-card>
     </ion-row>
 
     <ion-row class="home-card-container">
-      <wallet-card [title]="'Spent money'" [value]="'US$ 236.00'" [valueColor]="'#5181F1'"></wallet-card>
+      <wallet-card [title]="'Spent money'" [value]="balance.spentMoney" [valueColor]="'#5181F1'"></wallet-card>
     </ion-row>
 
     <ion-row>
       <ion-col class="home-card-container">
-        <wallet-card [title]="'Pending debts'" [value]="'4'" [valueColor]="'#F07070'" [valueSize]="50"></wallet-card>
+        <wallet-card [title]="'Pending debts'" [value]="balance.debts.pendingDebts" [valueColor]="'#F07070'"[valueSize]="50"></wallet-card>
       </ion-col>
       <ion-col class="home-card-container">
-        <wallet-card [title]="'Paid debts'" [value]="'2'" [valueColor]="'#3ACE60'" [valueSize]="50"></wallet-card>
+        <wallet-card [title]="'Paid debts'" [value]="balance.debts.paidDebts" [valueColor]="'#3ACE60'" [valueSize]="50">
+        </wallet-card>
       </ion-col>
     </ion-row>
 
     <ion-row class="home-card-container">
-      <wallet-card [title]="'Money in debts'" [value]="'US$ 398.00'" [valueColor]="'#F07070'"></wallet-card>
+      <wallet-card [title]="'Money in debts'" [value]="balance.debtTotal" [valueColor]="'#F07070'"></wallet-card>
     </ion-row>
   </ion-row>
 </ion-row>
